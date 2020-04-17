@@ -1,0 +1,52 @@
+@mixin center($px) {
+  margin: $px auto;
+  width: 100%;
+  max-width: 1040px;
+}
+
+.header{
+  &__upper-box{
+    @include center(0);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    &--logo{
+      height: 100%;
+      width: 200px;
+    }
+    &__search-box{
+      width: 400px;
+      form{
+        display: flex;
+        padding: 3px;
+        .search{
+          width: calc(100% - 40px);
+          height: 40px;
+        }
+        .btn{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  &__under-box{
+    height: 40px;
+    background-color: pink;
+    @include center(0);
+    &--category{}
+  }
+}
+
+.display{
+  background-color: blue;
+}
+.ranking{
+  background-color: green;
+}
+.user-dogs{
+  background-color: yellow;
+}
+.footer{
+  background-color: purple;
+}

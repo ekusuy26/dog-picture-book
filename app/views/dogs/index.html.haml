@@ -1,0 +1,17 @@
+.header
+  .header__upper-box
+    .header__upper-box--logo logo
+    .header__upper-box__search-box
+      = form_with(url: "#", local: true, method: :get) do |f|
+        = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
+        = image_submit_tag '/images/search.png', class: "btn"
+  .header__under-box
+    .header__under-box--category カテゴリから探す
+.display
+  登録した犬の画像
+.ranking
+  人気ランキング
+.user-dogs
+  登録したユーザー一覧
+.footer
+  フッタ
