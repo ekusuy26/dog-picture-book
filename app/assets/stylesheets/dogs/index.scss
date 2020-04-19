@@ -38,11 +38,38 @@
   }
 }
 
-.display{
+.category-image{
+  height: 250px;
+  background-color: yellow;
+}
+.user-image{
+  height: 250px;
   background-color: blue;
 }
-.ranking{
-  background-color: green;
+
+.wrap-ranking{
+  &__top{
+    @include center(0);
+    background-color: red;
+    padding: 30px 0;
+    text-align: center;
+    &--split{
+      padding: 10px 150px;
+      display: flex;
+      justify-content: space-around;
+      .image{
+        height: 150px;
+        width: 150px;
+        border: solid 1px;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.display{
+  background-color: blue;
 }
 .user-dogs{
   background-color: yellow;
