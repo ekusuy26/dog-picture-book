@@ -9,7 +9,8 @@
     .header__under-box--category カテゴリから探す
 
 .category-image
-  カテゴリの写真を流す
+  - @dogs.each do |b|
+    = image_tag "#{b.image}"
 .user-image
   ユーザーの登録した画像を流す
 
