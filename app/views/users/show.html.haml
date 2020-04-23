@@ -1,11 +1,15 @@
 = render "shared/header"
-マイページ
-= link_to "犬を登録する", new_pet_path, class:"test"
-- @pets.each do |p|
-  .dog
-    = image_tag "#{p.image}"
-    #{p.name}
-    #{p.dog_id}
-    #{p.age}
-    #{p.sex.name}
-    #{p.text}
+.wrap-user-show
+  .left-box
+    仮置きボックス<br>
+    = link_to "犬を登録する", new_pet_path, class:"test"
+  .wrap-user-show__pets-list
+    - @pets.each do |p|
+      .wrap-user-show__pets-list__pet
+        = image_tag "#{p.image}", height: '200', width: '200', class:"pet-img"
+        .wrap-user-show__pets-list__pet--wrap
+          %p #{p.name}
+          %p #{p.dog_id}
+          %p #{p.age}
+          %p #{p.sex.name}
+          %p #{p.text}

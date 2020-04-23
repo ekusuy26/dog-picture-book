@@ -1,3 +1,23 @@
-.test{
-  background-color: red;
+@import './mixin';
+
+.wrap-user-show{
+  @include center(0);
+  display: flex;
+  .left-box{
+    background-color: #ffff99;
+    height: 100vh;
+    width: 300px;
+  }
+  &__pets-list{
+    width: 100%;
+    &__pet{
+      border: solid 1px;
+      display: flex;
+      .pet-img{
+        display: block;
+      }
+      &--wrap{
+      }
+    }
+  }
 }
