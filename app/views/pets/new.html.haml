@@ -1,0 +1,26 @@
+= form_with(model: @pet, local: true) do |f|
+  = f.label :name
+  <br>
+  = f.text_field :name
+  <br>
+  = f.label :age
+  <br>
+  = f.text_field :age
+  <br>
+  = f.label :sex_id
+  <br>
+  = f.text_field :sex_id
+  <br>
+  = f.label :text
+  <br>
+  = f.text_field :text
+  <br>
+  = f.label :image
+  <br>
+  = f.text_field :image
+  <br>
+  = f.label :category
+  <br>
+  = f.text_field :dog_id
+  <br>
+  = f.submit "送信", class: "submit-btn"
