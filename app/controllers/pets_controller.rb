@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   def new
     @pet = Pet.new
+    @dogs = Dog.all
   end
 
   def show
