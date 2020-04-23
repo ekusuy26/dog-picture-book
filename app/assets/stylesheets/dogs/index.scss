@@ -57,11 +57,6 @@ img {
   100%,to { transform: translate(-100%); }
 }
 
-.user-image{
-  height: 250px;
-  background-color: blue;
-}
-
 .wrap-ranking{
   &__top{
     @include center(0);

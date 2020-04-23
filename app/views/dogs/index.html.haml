@@ -6,13 +6,18 @@
         = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
         = image_submit_tag '/images/search.png', class: "btn"
   .header__under-box
-    .header__under-box--category カテゴリから探す
+    .header__under-box--category
+      .list
+        = link_to 'カテゴリ検索', "#"
+        = link_to 'ユーザーの投稿一覧', "#"
+        = link_to 'ログイン', new_user_session_path
+        = link_to '新規登録', new_user_registration_path
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+
 
 .category-image
   - @dogs.each do |b|
     = image_tag "#{b.image}"
-.user-image
-  ユーザーの登録した画像を流す
 
 .wrap-ranking
   .wrap-ranking__top
