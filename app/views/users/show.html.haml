@@ -1,3 +1,11 @@
 = render "shared/header"
 マイページ
 = link_to "犬を登録する", new_pet_path, class:"test"
+- @pets.each do |p|
+  .dog
+    = image_tag "#{p.image}"
+    #{p.name}
+    #{p.dog_id}
+    #{p.age}
+    #{p.sex.name}
+    #{p.text}

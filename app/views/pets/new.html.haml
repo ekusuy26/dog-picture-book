@@ -9,7 +9,7 @@
   <br>
   = f.label :sex_id
   <br>
-  = f.collection_check_boxes :sex_id, Sex.all, :id, :name
+  = f.collection_select :sex_id, Sex.all, :id, :name
   <br>
   = f.label :text
   <br>
