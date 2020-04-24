@@ -1,9 +1,10 @@
 = render "shared/header"
 .wrap-user-show
   .left-box
-    仮置きボックス<br>
     = link_to "犬を登録する", new_pet_path, class:"test"
-    %p お気に入りをここに表示させる
+    %h3 いいねしている犬種
+    - @user.liked_dogs.each do |dog|
+      = image_tag "#{dog.image}", alt: '', height: '200', width: '200', class: ''
   .wrap-user-show__pets-list
     - @pets.each do |p|
       .wrap-user-show__pets-list__pet
