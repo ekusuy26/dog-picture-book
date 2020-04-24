@@ -5,31 +5,13 @@
     = link_to image_tag("#{b.image}", class: "category-image__photo"), search_path(b)
 
 .wrap-ranking
+  人気の犬種から探す
   .wrap-ranking__top
-    人気の犬種
-    .wrap-ranking__top--split
-      .image
-        1st
-      .image
-        2nd
-      .image
-        3rd
-    .wrap-ranking__top--split
-      .image
-        4th
-      .image
-        5th
-      .image
-        6th
-    .wrap-ranking__top--split
-      .image
-        7th
-      .image
-        8th
-      .image
-        9th
-      .image
-        10th
+    - @all_ranks.each_with_index do |rank, i|
+      .wrap-ranking__top__rank
+        .wrap-ranking__top__rank--num
+          #{i+1}位
+        = link_to image_tag("#{rank.image}", alt: '', height: '180', width: '180', class: 'wrap-ranking__top__rank--img'), search_path(rank)
 
 .display
   登録した犬の画像
