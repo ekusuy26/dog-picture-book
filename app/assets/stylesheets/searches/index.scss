@@ -1,0 +1,21 @@
+@import './mixin';
+
+.search-index-wrap{
+  @include center(0);
+  &__parent-box{
+    background-color: red;
+  }
+  &__children-box{
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    &__child-box{
+      margin: 20px;
+      width: 45%;
+      display: flex;
+      &--img{
+      }
+    }
+  }
+}

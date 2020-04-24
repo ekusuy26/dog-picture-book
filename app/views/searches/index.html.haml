@@ -1,0 +1,11 @@
+= render "shared/header"
+.search-index-wrap
+  - @parents.each do |parent|
+    .search-index-wrap__parent-box
+      #{parent.name}<br>
+      #{parent.text}
+    .search-index-wrap__children-box
+      - parent.children.each do |child|
+        .search-index-wrap__children-box__child-box
+          =link_to image_tag("#{child.image}", height: '100', width: '100', class: '.search-index-wrap__child-box--img'), search_path(child)
+          #{child.name}

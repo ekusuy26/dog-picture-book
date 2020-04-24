@@ -2,7 +2,7 @@
 
 .category-image
   - @dogs.each do |b|
-    = image_tag "#{b.image}", class: "category-image__photo"
+    = link_to image_tag("#{b.image}", class: "category-image__photo"), search_path(b)
 
 .wrap-ranking
   .wrap-ranking__top
