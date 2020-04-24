@@ -3,9 +3,14 @@
 .search-index-wrap{
   @include center(0);
   &__parent-box{
-    background-color: red;
+    width: 50%;
+    background-color: #00FF3B;
+    border-radius: 100% 0;
+    text-align: center;
   }
   &__children-box{
+    border-bottom: dotted 1px #808080;
+    margin-bottom: 50px;
     flex-wrap:wrap;
     justify-content: flex-start;
     width: 100%;
