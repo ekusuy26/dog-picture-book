@@ -9,7 +9,7 @@
   .header__under-box
     .header__under-box--category
       .list
-        = link_to 'カテゴリ検索', "#"
+        = link_to 'カテゴリ検索', searches_path
         = link_to 'ユーザーの投稿一覧', "#"
         - if user_signed_in?
           = link_to "ログアウト", destroy_user_session_path, method: :delete
