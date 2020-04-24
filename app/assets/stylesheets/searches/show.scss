@@ -1,0 +1,21 @@
+@import './mixin';
+
+.search-main{
+  @include center(0);
+  &__name{
+    font-size: 26px;
+  }
+  &__group-name{
+    font-size: 24px;
+  }
+  &__wrap{
+    display: flex;
+    &__feature{
+      font-size: 21px;
+      margin-left: 100px;
+      &--item{
+        margin: 50px 0;
+      }
+    }
+  }
+}

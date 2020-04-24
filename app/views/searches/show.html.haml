@@ -1,1 +1,17 @@
-hogehoge
+= render "shared/header"
+.search-main
+  .search-main__name
+    = @dog.name
+  .search-main__group-name
+    グループ#{@dog.parent.name}
+  .search-main__wrap
+    = image_tag "#{@dog.image}", height: '400', width: '400'
+    .search-main__wrap__feature
+      .search-main__wrap__feature--item
+        サイズ：#{@dog.size}
+      .search-main__wrap__feature--item
+        原産国： #{@dog.origin}
+      .search-main__wrap__feature--item
+        用途： #{@dog.use}
+      .search-main__wrap__feature--item
+        説明文： #{@dog.text}
