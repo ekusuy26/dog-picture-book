@@ -1,4 +1,5 @@
 = render "shared/header"
+= link_to "コメントを投稿する", new_comment_path
 .comments-index
   .comments-index__comments
     -@comments.each do |c|

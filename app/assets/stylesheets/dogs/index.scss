@@ -1,8 +1,9 @@
 @import './mixin';
 
 .header{
+  background-color: #ffffff;
+  @include center(0);
   &__upper-box{
-    @include center(0);
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -22,15 +23,29 @@
         .btn{
           width: 40px;
           height: 40px;
+          background-color: green;
         }
       }
     }
   }
   &__under-box{
     height: 40px;
-    background-color: pink;
     @include center(0);
-    &--category{}
+    display: flex;
+    justify-content: space-between;
+    &__left-box{
+      .category-btn{
+        text-decoration: none;
+        color: #000000;
+      }
+    }
+    &__right-box{
+      .user-btn{
+        margin-right: 20px;
+        text-decoration: none;
+        color: #000000;
+      }
+    }
   }
 }
 
@@ -55,9 +70,13 @@
 }
 
 .wrap-ranking{
+  border-bottom: dotted 1px #808080;
   padding: 50px 0;
-  background-color: red;
+  background-color: #ffffff;
   @include center(0);
+  p{
+    font-size: 24px;
+  }
   &__top{
     display: flex;
     flex-wrap:wrap;
@@ -66,10 +85,17 @@
     &__rank{
       height: 180px;
       width: 180px;
-      margin: 5px;
+      margin: 14px;
       &--num{
         position: absolute;
         z-index: 1;
+        font-size: 22px;
+        i{
+          position: absolute;
+          font-size: 28px;
+          opacity: 50%;
+          color: #ff0000;
+        }
       }
       &--img{
         border-radius: 50%;
@@ -79,15 +105,20 @@
 }
 
 .wrap-display{
-  padding: 50px;
+  border-bottom: dotted 1px #808080;
+  padding: 50px 0;
   @include center(0);
-  background-color: blue;
+  p{
+    font-size: 24px;
+  }
   &__new-comments{
     text-align: center;
   }
   &--more{
     display: block;
     text-align: right;
+    text-decoration: none;
+    color: #000000;
   }
 }
 .user-dogs{

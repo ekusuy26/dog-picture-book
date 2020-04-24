@@ -7,14 +7,17 @@
         = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
         = image_submit_tag '/images/search.png', class: "btn"
   .header__under-box
-    .header__under-box--category
-      .list
-        = link_to 'カテゴリ検索', searches_path
-        = link_to 'ユーザーの投稿一覧', comments_path
-        = link_to "コメントを投稿する", new_comment_path
-        - if user_signed_in?
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-          = link_to "マイページ", user_path(current_user)
-        - else
-          = link_to 'ログイン', new_user_session_path
-          = link_to '新規登録', new_user_registration_path
+    .header__under-box__left-box
+      %i.fas.fa-dog
+        = link_to 'カテゴリから探す', searches_path, class:"category-btn"
+    .header__under-box__right-box
+      - if user_signed_in?
+        %i.fas.fa-sign-out-alt
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-btn"
+        %i.fas.fa-user
+          = link_to "マイページ", user_path(current_user), class:"user-btn"
+      - else
+        %i.fas.fa-sign-in-alt
+          = link_to 'ログイン', new_user_session_path, class:"user-btn"
+        %i.fas.fa-plus
+          = link_to '新規登録', new_user_registration_path, class:"user-btn"
