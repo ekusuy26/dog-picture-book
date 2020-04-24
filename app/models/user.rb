@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :pets
   has_many :dogs
+  has_many :comments
   has_many :likes, dependent: :destroy
   has_many :liked_dogs, through: :likes, source: :dog
   devise :database_authenticatable, :registerable,

@@ -10,7 +10,8 @@
     .header__under-box--category
       .list
         = link_to 'カテゴリ検索', searches_path
-        = link_to 'ユーザーの投稿一覧', "#"
+        = link_to 'ユーザーの投稿一覧', comments_path
+        = link_to "コメントを投稿する", new_comment_path
         - if user_signed_in?
           = link_to "ログアウト", destroy_user_session_path, method: :delete
           = link_to "マイページ", user_path(current_user)

@@ -1,6 +1,7 @@
 @import "reset";
 @import "dogs/index";
 @import "users/show";
+@import "comments/index";
 @import "searches/index";
 @import "searches/show";
 @import "font-awesome-sprockets";
@@ -8,4 +9,8 @@
 
 * {
   box-sizing: border-box;
+}
+
+body{
+  background-color: #eeeeee;
 }
