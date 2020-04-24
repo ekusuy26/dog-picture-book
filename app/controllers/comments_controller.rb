@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   def index
+    @comments = Comment.all
   end
   
   def new
@@ -9,9 +10,9 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to root_path
+      redirect_to comments_path
     else
-      redirect_to root_path
+      redirect_to comments_path
     end
   end
 
