@@ -55,6 +55,7 @@
 }
 
 .wrap-ranking{
+  padding: 50px 0;
   background-color: red;
   @include center(0);
   &__top{
@@ -77,8 +78,17 @@
   }
 }
 
-.display{
+.wrap-display{
+  padding: 50px;
+  @include center(0);
   background-color: blue;
+  &__new-comments{
+    text-align: center;
+  }
+  &--more{
+    display: block;
+    text-align: right;
+  }
 }
 .user-dogs{
   background-color: yellow;
