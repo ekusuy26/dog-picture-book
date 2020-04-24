@@ -1,6 +1,7 @@
 .header
   .header__upper-box
-    .header__upper-box--logo logo
+    .header__upper-box--logo
+      = link_to "logo", root_path
     .header__upper-box__search-box
       = form_with(url: "#", local: true, method: :get) do |f|
         = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
@@ -10,7 +11,9 @@
       .list
         = link_to 'カテゴリ検索', "#"
         = link_to 'ユーザーの投稿一覧', "#"
-        = link_to 'ログイン', new_user_session_path
-        = link_to '新規登録', new_user_registration_path
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-        = link_to "マイページ", user_path(current_user)
+        - if user_signed_in?
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          = link_to "マイページ", user_path(current_user)
+        - else
+          = link_to 'ログイン', new_user_session_path
+          = link_to '新規登録', new_user_registration_path

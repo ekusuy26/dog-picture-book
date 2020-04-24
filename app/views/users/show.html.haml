@@ -3,13 +3,17 @@
   .left-box
     仮置きボックス<br>
     = link_to "犬を登録する", new_pet_path, class:"test"
+    %p お気に入りをここに表示させる
   .wrap-user-show__pets-list
     - @pets.each do |p|
       .wrap-user-show__pets-list__pet
         = image_tag "#{p.image}", height: '200', width: '200', class:"pet-img"
         .wrap-user-show__pets-list__pet--wrap
-          %p #{p.name}
-          %p #{p.dog_id}
-          %p #{p.age}
-          %p #{p.sex.name}
-          %p #{p.text}
+          %p name: #{p.name}
+          %p category: #{p.dog_id}
+          %p age: #{p.age}
+          %p sex: #{p.sex.name}
+          %p text: #{p.text}
+          .btn
+            = link_to "編集　", "#"
+            = link_to "削除", "#"
