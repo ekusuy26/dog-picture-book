@@ -1,18 +1,8 @@
-.header
-  .header__upper-box
-    .header__upper-box--logo logo
-    .header__upper-box__search-box
-      = form_with(url: "#", local: true, method: :get) do |f|
-        = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
-        = image_submit_tag '/images/search.png', class: "btn"
-  .header__under-box
-    .header__under-box--category カテゴリから探す
+= render "shared/header"
 
 .category-image
   - @dogs.each do |b|
-    = image_tag "#{b.image}"
-.user-image
-  ユーザーの登録した画像を流す
+    = image_tag "#{b.image}", class: "category-image__photo"
 
 .wrap-ranking
   .wrap-ranking__top
@@ -40,8 +30,6 @@
         9th
       .image
         10th
-
-
 
 .display
   登録した犬の画像

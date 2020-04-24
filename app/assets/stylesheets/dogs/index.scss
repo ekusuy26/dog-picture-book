@@ -1,8 +1,4 @@
-@mixin center($px) {
-  margin: $px auto;
-  width: 100%;
-  max-width: 1040px;
-}
+@import './mixin';
 
 .header{
   &__upper-box{
@@ -44,7 +40,7 @@
   overflow: hidden;
 }
 
-img {
+.category-image__photo {
   width: 300px;
   white-space: nowrap;
   animation-name: marquee;
@@ -55,11 +51,6 @@ img {
 @keyframes marquee {
   from    { transform: translate(0%); } 
   100%,to { transform: translate(-100%); }
-}
-
-.user-image{
-  height: 250px;
-  background-color: blue;
 }
 
 .wrap-ranking{
