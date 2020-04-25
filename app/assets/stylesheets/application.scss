@@ -10,3 +10,9 @@
 * {
   box-sizing: border-box;
 }
+
+body{
+  background-image: image-url('back-image.jpg');
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}
