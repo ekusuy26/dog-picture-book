@@ -8,8 +8,6 @@
         = image_submit_tag '/images/search.png', class: "btn"
   .header__under-box
     .header__under-box__left-box
-      %i.fas.fa-dog
-        = link_to 'カテゴリから探す', searches_path, class:"category-btn"
     .header__under-box__right-box
       - if user_signed_in?
         %i.fas.fa-sign-out-alt

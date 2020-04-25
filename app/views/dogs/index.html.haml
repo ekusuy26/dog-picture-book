@@ -18,5 +18,14 @@
   %p みんなの投稿から探す
   .wrap-display__new-comments
     - @comments.each do |c|
-      = link_to image_tag("#{c.image}", alt: '', height: '150', width: '150', class: "aaa"), "#"
+      = link_to image_tag("#{c.image}", alt: '', height: '150', width: '150', class: "display-img"), "#"
   = link_to "もっと見る＞＞", comments_path, class: "wrap-display--more"
+
+.wrap-category
+  %p グループから探す
+  .wrap-category__nav
+    -@parents.each do |p|
+      = link_to "#{p.name}", searches_path, class:"wrap-category__nav--group"
+  = link_to 'もっと見る＞＞', searches_path, class:"wrap-category--more"
+
+.footer
