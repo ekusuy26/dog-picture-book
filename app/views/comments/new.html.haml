@@ -1,11 +1,13 @@
 = render "shared/header"
-= form_with(model: @comment, local: true) do |f|
-  = f.label :text
-  <br>
-  = f.text_field :text
-  <br>
-  = f.label :image
-  <br>
-  = f.file_field :image
-  <br>
-  = f.submit "送信", class: "submit-btn"
+
+.comments-main
+  = form_with(model: @comment, local: true) do |f|
+    = f.label :image
+    <br>
+    = f.file_field :image, class:"comment-img"
+    <br>
+    = f.label :text
+    <br>
+    = f.text_field :text, class:"tweet"
+    <br>
+    = f.submit "送信", class: "submit-btn"
