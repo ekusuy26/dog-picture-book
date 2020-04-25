@@ -4,9 +4,6 @@ class PetsController < ApplicationController
     @dogs = Dog.all
   end
 
-  def show
-  end
-
   def create
     @pet = Pet.new(pet_params)
     if @pet.save
@@ -14,6 +11,23 @@ class PetsController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def edit
+    @pet = Pet.find(params[:id])
+    @dogs = Dog.all
+  end
+
+  def destroy
+    pet = Pet.find(params[:id])
+    pet.destroy
+    redirect_to user_path(current_user.id)
+  end
+
+  def update
+    pet = Pet.find(params[:id])
+    pet.update(pet_params)
+    redirect_to user_path(current_user.id)
   end
 
   private

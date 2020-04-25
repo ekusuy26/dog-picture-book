@@ -1,0 +1,29 @@
+= render "shared/header"
+
+.pets-new-main
+  = form_with(model: @pet, local: true) do |f|
+    = f.label :画像
+    <br>
+    = f.file_field :image, class:"pet-new-form"
+    <br>
+    = f.label :名前
+    <br>
+    = f.text_field :name, class:"pet-new-form"
+    <br>
+    = f.label :年齢
+    <br>
+    = f.text_field :age, class:"pet-new-form"
+    <br>
+    = f.label :性別
+    <br>
+    = f.collection_select :sex_id, Sex.all, :id, :name, prompt: "------"
+    <br>
+    = f.label :犬種
+    <br>
+    = f.collection_select :dog_id, @dogs, :id, :name, prompt: "------"
+    <br>
+    = f.label :自己紹介
+    <br>
+    = f.text_field :text, class:"introduction"
+    <br>
+    = f.submit "登録する", class: "submit-btn"
