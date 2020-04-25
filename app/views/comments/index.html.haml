@@ -1,5 +1,4 @@
 = render "shared/header"
-= link_to "コメントを投稿する", new_comment_path
 .comments-index
   .comments-index__comments
     -@comments.each do |c|
@@ -7,3 +6,6 @@
         = image_tag "#{c.image}", alt: '', height: '200', width: '200', class: ''
         .mask
           .caption #{c.text}
+= link_to new_comment_path do
+  #display-btn
+    %p 投稿する
