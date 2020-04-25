@@ -1,29 +1,71 @@
 @import './mixin';
 
+.user-header{
+  @include center(0);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 10px;
+  &__user-name{}
+  .dog-registration-btn{
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
 .wrap-user-show{
   @include center(0);
   display: flex;
   .left-box{
-    background-color: #ffff99;
-    height: 100vh;
+    background-color: #ffffff;
+    height: calc(100vh - 125px);
     width: 300px;
+    text-align: center;
+    overflow: scroll;
+    margin-right: 20px;
+    .favolite-img{
+      border-radius: 50%;
+    }
   }
   &__pets-list{
     width: 100%;
+    background-color: #ffffff;
+    &--title{
+      font-size: 21px;
+      text-align: center;
+      p{
+        text-decoration: underline #FFFF00;
+      }
+    }
     &__pet{
       border: solid 1px;
       display: flex;
+      margin: 50px;
       .pet-img{
         display: block;
       }
       &--wrap{
         width: 100%;
+        background: linear-gradient(-135deg, #FFFF88, #FFFFEE);
+        padding: 0 50px;
+        .introduction{
+          height: calc(100% - 40px);
+          overflow: scroll;
+        }
       }
       .btn{
+        height: 30px;
         width: 100px;
         margin: 0 0 0 auto;
         display: flex;
         border: solid 1px;
+        bottom: 0;
+        .edit-btn{
+          margin-left: 10px;
+          text-decoration: none;
+          color: #000000;
+        }
       }
     }
   }

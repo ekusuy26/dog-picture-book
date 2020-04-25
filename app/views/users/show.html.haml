@@ -1,20 +1,27 @@
 = render "shared/header"
+.user-header
+  .user-header__user-name
+    #{current_user.name}　さんのマイページ
+  %i.fas.fa-dog
+    = link_to "犬を登録する", new_pet_path, class:"dog-registration-btn"
 .wrap-user-show
   .left-box
-    = link_to "犬を登録する", new_pet_path, class:"test"
-    %h3 いいねしている犬種
+    %h3 お気に入り一覧
     - @user.liked_dogs.each do |dog|
-      = image_tag "#{dog.image}", alt: '', height: '200', width: '200', class: ''
+      = link_to image_tag("#{dog.image}", height: '100', width: '100', class: 'favolite-img'), search_path(dog)
   .wrap-user-show__pets-list
+    .wrap-user-show__pets-list--title
+      %p 登録済みわんこ
     - @pets.each do |p|
       .wrap-user-show__pets-list__pet
         = image_tag "#{p.image}", height: '200', width: '200', class:"pet-img"
         .wrap-user-show__pets-list__pet--wrap
-          %p name: #{p.name}
-          %p category: #{p.dog_id}
-          %p age: #{p.age}
-          %p sex: #{p.sex.name}
-          %p text: #{p.text}
+          .introduction
+            %p name: #{p.name}
+            %p category: #{p.dog_id}
+            %p age: #{p.age}
+            %p sex: #{p.sex.name}
+            %p text: #{p.text}
           .btn
-            = link_to "編集　", "#"
-            = link_to "削除", "#"
+            = link_to "編集", "#", class:"edit-btn"
+            = link_to "削除", "#", class:"edit-btn"
