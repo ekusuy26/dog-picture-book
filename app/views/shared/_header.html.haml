@@ -1,7 +1,8 @@
 .header
   .header__upper-box
     .header__upper-box--logo
-      = link_to "logo", root_path
+      -# = link_to "logo", root_path
+      = link_to image_tag('/images/logo.png', width: '90', height: `90`, class: 'logo'), root_path
     .header__upper-box__search-box
       = form_with(url: "#", local: true, method: :get) do |f|
         = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'

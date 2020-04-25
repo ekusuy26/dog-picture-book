@@ -4,8 +4,7 @@
     -@comments.each do |c|
       .comments-index__comments__comment
         = image_tag "#{c.image}", alt: '', height: '200', width: '200', class: ''
-        .mask
-          .caption #{c.text}
+        =link_to "#{c.text}", comment_path(c), class: "mask"
 = link_to new_comment_path do
   #display-btn
     %p 投稿する

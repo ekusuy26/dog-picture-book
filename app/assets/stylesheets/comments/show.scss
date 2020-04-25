@@ -1,0 +1,39 @@
+@import './mixin';
+
+.comment-show-wrap{
+  // background-color: #ffffff;
+  margin: 30px auto;
+  width: 700px;
+  height: calc(100vh - 100px);
+  display: flex;
+  &__left-box{
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    border: dotted 1px #808080;
+    &__img{}
+    &__text{
+      border-bottom: dotted 1px #808080;
+      height: 34%;
+    }
+    &__comment-box{
+    }
+  }
+  &__right-box{
+    width: calc( 100% - 300px);
+    background-color: #ffffff;
+  }
+}
+
+//   .comment-show-left{
+//   text-align: center;
+//   margin: 30px auto;
+//   height: 700px;
+//   &__img{
+//     width: 100%;
+//   }
+//   &__text{
+//     border-bottom: dotted 1px #808080;
+//     min-height: 100px;
+//   }
+// }

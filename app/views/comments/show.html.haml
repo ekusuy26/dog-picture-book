@@ -1,0 +1,25 @@
+= render "shared/header"
+.comment-show-wrap
+  .comment-show-wrap__left-box
+    = image_tag "#{@comment.image}", alt: '', height: '', width: '', class: 'comment-show-wrap__left-box__img'
+    .comment-show-wrap__left-box__text
+      #{@comment.text}
+    .comment-show-wrap__left-box__comment-box
+      - if current_user
+        = form_with(model: [@comment, @talk], local: true) do |form|
+          = form.text_area :text, placeholder: "コメントする", rows: "2"
+          = form.submit "SEND"
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+  .comment-show-wrap__right-box
+    .comments
+      %h4 ＜コメント一覧＞
+      - if @talks
+        - @talks.each do |talk|
+          %p
+            %strong
+              = link_to talk.user.name, "#"
+              ：
+            = talk.text
+    
