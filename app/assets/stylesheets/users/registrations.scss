@@ -1,0 +1,19 @@
+@import './mixin';
+
+.nav{
+  height: 50px;
+}
+
+.user-wrap{
+  background-color: #ffffff;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  height: 700px;
+  .field{
+    margin: 35px 0;
+  }
+  .actions{
+    margin: 35px 0;
+  }
+}

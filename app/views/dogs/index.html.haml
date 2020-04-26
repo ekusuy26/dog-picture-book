@@ -18,7 +18,7 @@
   %p みんなの投稿から探す
   .wrap-display__new-comments
     - @comments.each do |c|
-      = link_to image_tag("#{c.image}", alt: '', height: '150', width: '150', class: "display-img"), "#"
+      = link_to image_tag("#{c.image}", alt: '', height: '150', width: '150', class: "display-img"), comment_path(c)
   = link_to "もっと見る＞＞", comments_path, class: "wrap-display--more"
 
 .wrap-category
