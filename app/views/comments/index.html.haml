@@ -1,4 +1,6 @@
 = render "shared/header"
+- breadcrumb :comments
+= render "layouts/breadcrumbs"
 .comments-index
   .comments-index__comments
     -@comments.each do |c|

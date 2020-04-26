@@ -1,4 +1,6 @@
 = render "shared/header"
+- breadcrumb :newcomment
+= render "layouts/breadcrumbs"
 
 .comments-main
   = form_with(model: @comment, local: true) do |f|

@@ -1,4 +1,6 @@
 = render "shared/header"
+- breadcrumb :comment
+= render "layouts/breadcrumbs"
 .comment-show-wrap
   .comment-show-wrap__left-box
     = image_tag "#{@comment.image}", alt: '', height: '', width: '', class: 'comment-show-wrap__left-box__img'

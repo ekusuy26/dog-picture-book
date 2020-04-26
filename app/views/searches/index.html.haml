@@ -1,4 +1,6 @@
 = render "shared/header"
+- breadcrumb :categories
+= render "layouts/breadcrumbs"
 .search-index-wrap
   - @parents.each do |parent|
     .search-index-wrap__parent-box
