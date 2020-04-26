@@ -1,43 +1,37 @@
 @import './mixin';
 
-.header{
+.header-wrap{
   background-color: #ffffff;
-  @include center(0);
-  &__upper-box{
-    height: 50px;
+  height: 100px;
+  padding-top: 5px;
+  &__header{
     display: flex;
     justify-content: space-between;
-    &--logo{
+    @include center(0);
+    &__right-box{
       height: 100%;
-      width: 200px;
-    }
-    &__search-box{
-      width: 400px;
-      form{
-        display: flex;
-        padding: 3px;
-        .search{
-          width: calc(100% - 40px);
-          height: 40px;
-        }
-        .btn{
-          width: 40px;
-          height: 40px;
-          border: dotted 1px #C0C0C0;
+      &__search-box{
+        width: 400px;
+        form{
+          display: flex;
+          margin: 5px;
+          .search{
+            width: calc(100% - 40px);
+          }
+          .btn{
+            width: 40px;
+            border: dotted 1px #C0C0C0;
+          }
         }
       }
-    }
-  }
-  &__under-box{
-    height: 40px;
-    @include center(0);
-    display: flex;
-    justify-content: space-between;
-    &__right-box{
-      .user-btn{
-        margin-right: 20px;
-        text-decoration: none;
-        color: #000000;
+      &__under{
+        padding-top: 15px;
+        text-align: right;
+        .user-btn{
+          margin-right: 20px;
+          text-decoration: none;
+          color: #000000;
+        }
       }
     }
   }

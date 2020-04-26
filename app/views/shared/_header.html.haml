@@ -1,22 +1,22 @@
-.header
-  .header__upper-box
-    .header__upper-box--logo
-      -# = link_to "logo", root_path
-      = link_to image_tag('/images/logo.png', width: '90', height: `90`, class: 'logo'), root_path
-    .header__upper-box__search-box
-      = form_with(url: "#", local: true, method: :get) do |f|
-        = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
-        = image_submit_tag '/images/search.png', class: "btn"
-  .header__under-box
-    .header__under-box__left-box
-    .header__under-box__right-box
-      - if user_signed_in?
-        %i.fas.fa-sign-out-alt
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-btn"
-        %i.fas.fa-user
-          = link_to "マイページ", user_path(current_user), class:"user-btn"
-      - else
-        %i.fas.fa-sign-in-alt
-          = link_to 'ログイン', new_user_session_path, class:"user-btn"
-        %i.fas.fa-plus
-          = link_to '新規登録', new_user_registration_path, class:"user-btn"
+.header-wrap
+  .header-wrap__header
+    .header-wrap__header__left-box
+      .header-wrap__header__upper-box--logo
+        = link_to image_tag('/images/logo.png', width: '', height: '90', class: 'logo'), root_path
+        = link_to image_tag('/images/logo-name.png', width: '', height: '90', class: 'logo'), root_path
+    .header-wrap__header__right-box
+      .header-wrap__header__right-box__search-box
+        = form_with(url: "#", local: true, method: :get) do |f|
+          = f.text_field :keyword, class: "search", placeholder: 'キーワードから探す'
+          = image_submit_tag '/images/search.png', class: "btn"
+      .header-wrap__header__right-box__under
+        - if user_signed_in?
+          %i.fas.fa-sign-out-alt
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"user-btn"
+          %i.fas.fa-user
+            = link_to "マイページ", user_path(current_user), class:"user-btn"
+        - else
+          %i.fas.fa-sign-in-alt
+            = link_to 'ログイン', new_user_session_path, class:"user-btn"
+          %i.fas.fa-plus
+            = link_to '新規登録', new_user_registration_path, class:"user-btn"
