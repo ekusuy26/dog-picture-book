@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_04_25_124108) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
-    t.text "image"
+    t.text "image", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,11 +45,11 @@ ActiveRecord::Schema.define(version: 2020_04_25_124108) do
   end
 
   create_table "pets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "age"
     t.integer "sex_id"
     t.string "text"
-    t.text "image"
+    t.text "image", null: false
     t.bigint "dog_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -59,11 +59,13 @@ ActiveRecord::Schema.define(version: 2020_04_25_124108) do
   end
 
   create_table "talks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "comment_id"
-    t.text "text"
+    t.bigint "user_id"
+    t.bigint "comment_id"
+    t.text "text", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_talks_on_comment_id"
+    t.index ["user_id"], name: "index_talks_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -84,4 +86,6 @@ ActiveRecord::Schema.define(version: 2020_04_25_124108) do
   add_foreign_key "likes", "users"
   add_foreign_key "pets", "dogs"
   add_foreign_key "pets", "users"
+  add_foreign_key "talks", "comments"
+  add_foreign_key "talks", "users"
 end

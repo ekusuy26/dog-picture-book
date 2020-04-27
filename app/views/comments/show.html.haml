@@ -8,7 +8,7 @@
       #{@comment.text}
     - if current_user
       = form_with(model: [@comment, @talk], local: true) do |form|
-        = form.text_area :text, placeholder: "コメントする", rows: "2", class:"comment-text"
+        = form.text_area :text, placeholder: "コメントする", rows: "2"
         = form.submit "SEND"
     - else
       %strong

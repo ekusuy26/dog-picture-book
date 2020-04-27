@@ -1,9 +1,9 @@
 class CreateTalks < ActiveRecord::Migration[5.2]
   def change
     create_table :talks do |t|
-      t.integer :user_id
-      t.integer :comment_id
-      t.text :text
+      t.references :user, foreign_key: true
+      t.references :comment, foreign_key: true
+      t.text :text, null: false
 
       t.timestamps
     end
