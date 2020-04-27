@@ -1,7 +1,7 @@
 class TalksController < ApplicationController
   def create
     Talk.create(talk_params)
-    redirect_to root_path
+    redirect_to comment_path(params[:comment_id])
   end
 
   private

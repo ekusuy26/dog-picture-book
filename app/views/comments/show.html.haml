@@ -3,17 +3,16 @@
 = render "layouts/breadcrumbs"
 .comment-show-wrap
   .comment-show-wrap__left-box
-    = image_tag "#{@comment.image}", alt: '', height: '', width: '', class: 'comment-show-wrap__left-box__img'
+    = image_tag "#{@comment.image}", alt: '', height: '300', width: '300', class: 'comment-show-wrap__left-box__img'
     .comment-show-wrap__left-box__text
       #{@comment.text}
-    .comment-show-wrap__left-box__comment-box
-      - if current_user
-        = form_with(model: [@comment, @talk], local: true) do |form|
-          = form.text_area :text, placeholder: "コメントする", rows: "2"
-          = form.submit "SEND"
-      - else
-        %strong
-          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    - if current_user
+      = form_with(model: [@comment, @talk], local: true) do |form|
+        = form.text_area :text, placeholder: "コメントする", rows: "2", class:"comment-text"
+        = form.submit "SEND"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
   .comment-show-wrap__right-box
     .comments
       %h4 ＜コメント一覧＞
@@ -23,10 +22,12 @@
             .comments__comment-right
               .right
                 = talk.text
-              = link_to talk.user.name, "#", class:"user-icon"
+              %i.fas.fa-user-circle
+                = link_to talk.user.name, "#", class:"user-icon"
           - else
             .comments__comment-left
-              = link_to talk.user.name, "#", class:"user-icon"
+              %i.fas.fa-user-circle
+                = link_to talk.user.name, "#", class:"user-icon"
               .left
                 = talk.text
 = render "shared/footer"

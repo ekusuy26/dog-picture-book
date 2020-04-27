@@ -1,39 +1,49 @@
 @import './mixin';
 
 .comment-show-wrap{
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 700px;
-  height: calc(100vh - 195px);
+  height: calc(100vh - 215px);
   display: flex;
   &__left-box{
     background-color: #ffffff;
     width: 300px;
-    height: 400px;
     border: dotted 1px #808080;
-    &__img{}
     &__text{
       border-bottom: dotted 1px #808080;
       height: 34%;
-    }
-    &__comment-box{
     }
   }
   &__right-box{
     width: calc( 100% - 300px);
     background-color: #EEEEEE;
+    overflow: scroll;
+    padding: 0 10px;
     .comments{
+      margin: 10px;
       &__comment-right{
         display: flex;
         .right{
           background-color: #00EE00;
-          margin: 5px 0 5px auto;
+          margin: 10px 0 10px auto;
           padding: 5px 20px;
           border-radius: 15px;
           position: relative;
-          max-width: 70%;
+          max-width: 60%;
         }
-        .user-icon{
-          margin: 0 10px;
+        i{
+          position: relative;
+          font-size: 30px;
+          margin-left: 10px;
+          .user-icon{
+            text-decoration: none;
+            color: #000000;
+            margin: 0 10px;
+            position: absolute;
+            font-size: 14px;
+            left: -10px;
+            top: 27px;
+          }
         }
         .right:before {
           content: "";
@@ -48,14 +58,24 @@
         display: flex;
         .left{
           background-color: #ffffff;
-          margin: 5px;
+          margin: 10px;
           padding: 5px 20px;
           border-radius: 15px;
           position: relative;
-          max-width: 70%;
+          max-width: 60%;
         }
-        .user-icon{
-          margin: 0 10px;
+        i{
+          position: relative;
+          font-size: 30px;
+          .user-icon{
+            text-decoration: none;
+            color: #000000;
+            margin: 0 10px;
+            position: absolute;
+            font-size: 14px;
+            left: -10px;
+            top: 27px;
+          }
         }
         .left:before {
           content: "";
