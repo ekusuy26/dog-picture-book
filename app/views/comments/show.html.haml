@@ -19,9 +19,20 @@
       %h4 ＜コメント一覧＞
       - if @talks
         - @talks.each do |talk|
-          %p
-            %strong
+          - if talk.user.name == current_user.name
+            .comments__comment-right
+              .right
+                %p
+                  %strong
+                  = talk.text
+              ：
+              = link_to talk.user.name, "#"
+          - else
+            .comments__comment-left
               = link_to talk.user.name, "#"
               ：
-            = talk.text
-    
+              .left
+                %p
+                  %strong
+                  = talk.text
+= render "shared/footer"
