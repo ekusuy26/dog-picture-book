@@ -4,9 +4,14 @@
 
 .comments-main
   = form_with(model: @comment, local: true) do |f|
-    = f.label :image
-    <br>
-    = f.file_field :image, class:"comment-img"
+    = f.label '画像を選択'
+    #img_field{:onclick => "$('#file').click()"}
+      - if @comment.image.url.present?
+        = image_tag(@comment.image.url)
+      - else
+        %i.fas.fa-image
+        %i.fas.fa-file-upload.add
+    = f.file_field :image, class:"comment-img", style: "display:none;", id:"file"
     <br>
     = f.label :text
     <br>

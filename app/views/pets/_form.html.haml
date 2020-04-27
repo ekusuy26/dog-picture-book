@@ -1,8 +1,13 @@
 .pets-new-main
   = form_with(model: @pet, local: true) do |f|
-    = f.label :画像
-    <br>
-    = f.file_field :image, class:"pet-new-form"
+    = f.label '画像を選択'
+    #img_field{:onclick => "$('#file').click()"}
+      - if @pet.image.url.present?
+        = image_tag(@pet.image.url)
+      - else
+        %i.fas.fa-image
+        %i.fas.fa-file-upload.add
+    = f.file_field :image, class:"pet-new-form", style: "display:none;", id:"file"
     <br>
     = f.label :名前
     <br>
@@ -25,3 +30,5 @@
     = f.text_field :text, class:"introduction"
     <br>
     = f.submit "登録する", class: "submit-btn"
+
+= render "shared/footer"
