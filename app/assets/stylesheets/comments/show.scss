@@ -1,10 +1,9 @@
 @import './mixin';
 
 .comment-show-wrap{
-  // background-color: #ffffff;
   margin: 0 auto;
   width: 700px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 195px);
   display: flex;
   &__left-box{
     background-color: #ffffff;
@@ -21,45 +20,47 @@
   }
   &__right-box{
     width: calc( 100% - 300px);
-    background-color: blue;
+    background-color: #EEEEEE;
     .comments{
       &__comment-right{
         display: flex;
         .right{
-          background-color: #008000;
-          margin: 5px;
+          background-color: #00EE00;
+          margin: 5px 0 5px auto;
+          padding: 5px 20px;
           border-radius: 15px;
           position: relative;
-          .user-icon{
-          }
+          max-width: 70%;
+        }
+        .user-icon{
+          margin: 0 10px;
         }
         .right:before {
           content: "";
           position: absolute;
-          // top: 100%;
           left: 100%;
-          margin-left: -15px;
+          margin-left: -5px;
           border: 12px solid transparent;
-          border-left: 12px solid #008000;
+          border-left: 12px solid #00EE00;
         }
       }
       &__comment-left{
         display: flex;
         .left{
-          // text-align: left;
           background-color: #ffffff;
           margin: 5px;
+          padding: 5px 20px;
           border-radius: 15px;
           position: relative;
-          .user-icon{
-          }
+          max-width: 70%;
+        }
+        .user-icon{
+          margin: 0 10px;
         }
         .left:before {
           content: "";
           position: absolute;
-          // top: 100%;
-          right: 100%;
-          margin-left: -15px;
+          margin-left: -38px;
           border: 12px solid transparent;
           border-right: 12px solid #ffffff;
         }

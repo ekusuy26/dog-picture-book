@@ -22,17 +22,11 @@
           - if talk.user.name == current_user.name
             .comments__comment-right
               .right
-                %p
-                  %strong
-                  = talk.text
-              ：
-              = link_to talk.user.name, "#"
+                = talk.text
+              = link_to talk.user.name, "#", class:"user-icon"
           - else
             .comments__comment-left
-              = link_to talk.user.name, "#"
-              ：
+              = link_to talk.user.name, "#", class:"user-icon"
               .left
-                %p
-                  %strong
-                  = talk.text
+                = talk.text
 = render "shared/footer"
