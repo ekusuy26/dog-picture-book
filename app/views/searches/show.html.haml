@@ -18,12 +18,14 @@
       - @dog.liked_users.each do |user|
         %li= user.name
     .search-main__wrap__feature
+      = image_tag '/images/line.png', height: '20', width: '100%', class: ''
       .search-main__wrap__feature--item
         サイズ：#{@dog.size}
       .search-main__wrap__feature--item
         原産国： #{@dog.origin}
       .search-main__wrap__feature--item
         用途： #{@dog.use}
-      .search-main__wrap__feature--item
+      = image_tag '/images/line.png', height: '20', width: '100%', class: ''
+      .search-main__wrap__feature--text
         説明文： #{@dog.text}
 = render "shared/footer"

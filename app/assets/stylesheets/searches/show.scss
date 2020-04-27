@@ -10,15 +10,17 @@
   }
   &__wrap{
     display: flex;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 270px);
     &__favolite{
       margin: 0 20px;
+      width: 600px;
     }
     &__feature{
       font-size: 21px;
       margin-left: 100px;
       &--item{
         margin-bottom: 30px;
+        text-align: center;
       }
     }
   }
