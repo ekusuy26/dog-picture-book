@@ -1,4 +1,5 @@
-# [Dog Questo]ReadMe
+# README
+【Dog Questo】取扱説明書
 ![画像名](https://github.com/ekusuy26/dog-picture-book/blob/master/reademe_image/top-page1.jpg)
 
 ## 本番環境URL
