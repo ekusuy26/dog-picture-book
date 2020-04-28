@@ -2,7 +2,7 @@
 ![画像名](https://github.com/ekusuy26/dog-picture-book/blob/master/reademe_image/top-page1.jpg)
 
 ## 本番環境URL
-http://54.178.203.223/
+* http://54.178.203.223/
 
 ## テストアカウント
 * メールアドレス　test@test
