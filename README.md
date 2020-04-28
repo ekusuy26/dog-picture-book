@@ -40,12 +40,23 @@
 * カテゴリー機能
 * お気に入り機能
 
+#### メインページ
+![画像名](./reademe_image/top-page1.jpg)
+![画像名](./reademe_image/top-page2.jpg)
+登録データからランダムに画像と取り出し、画像が流れる様になっています。  
+ユーザーのお気に入り機能からランキングを作成し、自動で人気順位が表示されます。  
+ユーザーの投稿を新着順で5つ表示させております。  
+gemファイル「ancestry」を用いてカテゴリー機能を実装しております。  
+
 #### ユーザー登録機能
 <img src="./reademe_image/sign-up.png" width="400"></img>
 <img src="./reademe_image/sign-in.png" width="400"></img>
+gemファイル「devise」を導入しユーザーネーム、メールアドレス、パスワードにてユーザー登録が可能です。
+今後、googleアカウントを利用してのログイン機能を実装する予定です。
 #### ペット登録機能
 #### マイページ機能
 ![画像名](./reademe_image/mypage.png)
+
 #### 記事投稿、編集、削除機能
 #### チャット機能
 ![画像名](./reademe_image/comment-page.jpg)
