@@ -1,5 +1,5 @@
 # README
-【Dog Questo】取扱説明書
+## 【Dog Questo】取扱説明書
 ![画像名](https://github.com/ekusuy26/dog-picture-book/blob/master/reademe_image/top-page1.jpg)
 
 ## 本番環境URL
@@ -12,6 +12,15 @@
 ## 制作経緯
 
 ## 開発環境
+* Haml & Sass
+* JavaScript
+* JQuery
+* Ruby
+* Ruby on Rails
+* mySQL
+* AWS
+* GitHub
+* Visual Studio Code
 
 ## 実装内容
 
