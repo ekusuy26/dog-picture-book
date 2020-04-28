@@ -41,8 +41,8 @@
 * お気に入り機能
 
 #### ユーザー登録機能
-<img src="./reademe_image/sign-up.png" width="500"></img>
-![画像名](./reademe_image/sign-in.png)
+<img src="./reademe_image/sign-up.png" width="300"></img>
+<img src="./reademe_image/sign-in.png" width="300"></img>
 #### ペット登録機能
 #### マイページ機能
 ![画像名](./reademe_image/mypage.png)
