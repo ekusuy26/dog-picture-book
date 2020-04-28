@@ -40,6 +40,15 @@
 * カテゴリー機能
 * お気に入り機能
 
+### ユーザー登録機能
+* ペット登録機能
+* マイページ機能
+* 記事投稿、編集、削除機能
+* チャット機能
+* パンくず機能
+* カテゴリー機能
+* お気に入り機能
+
 ## 今後の実装予定
 
 This README would normally document whatever steps are necessary to get the
