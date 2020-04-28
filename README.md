@@ -47,7 +47,6 @@
 ユーザーのお気に入り機能からランキングを作成し、自動で人気順位が表示されます。  
 ユーザーの投稿を新着順で5つ表示させております。  
 gemファイル「ancestry」を用いてカテゴリー機能を実装しております。  
-
 #### ユーザー登録機能
 <img src="./reademe_image/sign-up.png" width="400"></img>
 <img src="./reademe_image/sign-in.png" width="400"></img>
