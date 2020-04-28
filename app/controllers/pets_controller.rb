@@ -7,9 +7,11 @@ class PetsController < ApplicationController
   def create
     @pet = Pet.new(pet_params)
     if @pet.save
-      redirect_to root_path
+      flash[:notice] = '登録が完了しました。'
+      redirect_to user_path(current_user.id)
     else
-      redirect_to root_path
+      flash[:alert] = '登録に失敗しました。'
+      redirect_to user_path(current_user.id)
     end
   end
 
