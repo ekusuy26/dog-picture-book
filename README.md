@@ -52,41 +52,25 @@ gemファイル「ancestry」を用いてカテゴリー機能を実装してお
 <img src="./reademe_image/sign-in.png" width="400"></img>
 gemファイル「devise」を導入しユーザーネーム、メールアドレス、パスワードにてユーザー登録が可能です。
 今後、googleアカウントを利用してのログイン機能を実装する予定です。
-#### ペット登録機能
 #### マイページ機能
 ![画像名](./reademe_image/mypage.png)
-
-#### 記事投稿、編集、削除機能
-#### チャット機能
+お気に入り登録した犬種を一覧表示させております。
+ユーザーに紐つけて、ペットの登録、編集、削除が可能です。
+#### 記事投稿、編集、削除機能、チャット機能
+![画像名](./reademe_image/comment-index.jpg)
 ![画像名](./reademe_image/comment-page.jpg)
+一覧表示で画像にマウスホバーすると投稿のコメントが確認できます。
+詳細ページへ飛ぶことでチャットが可能です。
 #### パンくず機能
 ![画像名](./reademe_image/mypage.png)
+gemファイル「gretel」を使用し、パンくず機能を各ページに配置しています。
+視覚的に現在地をわかりやすくし、リンクを仕込むことで他ページで飛ぶことができます。
 #### カテゴリー機能
 ![画像名](./reademe_image/category-page.png)
-#### お気に入り機能
-![画像名](./reademe_image/mypage.png)
+gemファイル「ancestry」により、多階層カテゴリを実装。seedファイルを使い、初期値としてデータを作成しております。
 
 ## 今後の実装予定
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* googleアカウントを用いてのユーザー登録、ログインを実装
+* チャット機能に非同期機能を実装
+* 各犬種の説明文を追記
+* 検索機能の実装
