@@ -12,4 +12,5 @@ class User < ApplicationRecord
   def already_liked?(dog)
     self.likes.exists?(dog_id: dog.id)
   end
+  validates :name, presence: true, length: { maximum: 6 }
 end
