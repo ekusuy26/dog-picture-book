@@ -7,7 +7,7 @@
     .comment-show-wrap__left-box__text
       #{@comment.text}
     - if current_user
-      = form_with(model: [@comment, @talk], local: true) do |form|
+      = form_with(model: [@comment, @talk], local: true, id: "new_message") do |form|
         = form.text_area :text, placeholder: "コメントする", rows: "2"
         = form.submit "SEND"
     - else
