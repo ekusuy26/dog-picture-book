@@ -15,10 +15,10 @@ describe Pet do
       expect(pet.errors[:image]).to include("can't be blank")
     end
     
-    # it "nameとimageがある場合は登録できること" do
-    #   pet = build(:pet, name: "テスト")
-    #   expect(pet).to be_valid
-    # end
+    it "nameとimageがある場合は登録できること" do
+      pet = build(:pet, name: "テスト")
+      expect(pet).to be_valid
+    end
 
   end
 end
